@@ -1,0 +1,26 @@
+
+<h1>My songs</h1>
+
+<%= link_to 'New song', new_text_path %>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Song</th>
+    <th>Artist</th>
+    <th colspan="3"></th>
+  </tr>
+
+  <% @texts.each do |text| %>
+    <tr>
+      <td><%= text.title %></td>
+      <td><%= text.text %></td>
+      <td><%= text.artist %></td>
+      <td><%= link_to 'Show', text_path(text) %></td>
+      <td><%= link_to 'Edit', edit_text_path(text) %></td>
+      <td><%= link_to 'Destroy', text_path(text),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>

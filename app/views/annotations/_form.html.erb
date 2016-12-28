@@ -1,0 +1,13 @@
+<%= form_for([@text, @text.annotations.build]) do |f| %>
+  <p>
+    <%= f.label :annotater %><br>
+    <%= f.text_field :annotater %>
+  </p>
+  <p>
+    <%= f.label :body %><br>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

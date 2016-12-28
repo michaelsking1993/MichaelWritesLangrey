@@ -1,0 +1,16 @@
+
+<% @text.annotations.each do |annotation| %>
+<p>
+  <strong>Annotater:</strong>
+  <%= annotation.annotater %>
+</p>
+
+<p>
+  <strong>Annotation:</strong>
+  <%= annotation.body %>
+</p>
+
+  <%= link_to 'Destroy Annotation', [annotation.text, annotation],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+  <% end %>

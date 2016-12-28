@@ -1,0 +1,12 @@
+<%= form_for(@user) do |f| %>
+    <%= f.text_field :target_lang, :placeholder => "Target Language" %>
+    <%= f.text_field :interface_lang, :placeholder => "Interface Language" %>
+    <%= f.text_field :native_lang, :placeholder => "Native Language" %>
+    <%= f.text_field :favorite_artist, :placeholder => "Input your favorite artist" %>
+    <%= f.submit "Start Learning", class: "btn-submit" %>
+
+    <!--    f.email_field :email, :placeholder => "Email"
+        f.password_field :password_digest, :placeholder => "Password"
+        f.text_field :first_name, :placeholder => "First Name"
+         f.text_field :last_name, :placeholder => "Last Name" -->
+<% end %>

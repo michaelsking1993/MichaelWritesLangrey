@@ -1,0 +1,18 @@
+<p>
+  <strong>Title:</strong>
+  <%= @text.title %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @text.text %>
+</p>
+
+<h2>Annotations</h2>
+<%= render @text.annotations %>
+
+<h2>Add an annotation:</h2>
+<%= render 'annotations/form' %>
+
+<%= link_to 'Edit', edit_text_path(@text) %> |
+<%= link_to 'Back', texts_path %>
